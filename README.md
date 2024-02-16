@@ -1,6 +1,9 @@
 Network monitoring architecture, customizable for live alerts.
 The full infrastructure is provisioned via terraform.
 
+
+![Diagramma vpc flow logs](https://github.com/PartySlayer/VPC_Flow_Logs/assets/120326157/f32e8607-9047-49e2-a6bc-d80cd8accf8a)
+
 VPC Setup:
 
 The Virtual Private Cloud (VPC) for the network infrastructure.
