@@ -26,3 +26,11 @@ module "vpc" {
   public_subnet_cidr_block   = var.public_subnet_cidr_block
   private_subnet_cidr_block  = var.private_subnet_cidr_block
 }
+
+#NACL
+
+module "nacl" {
+  source = "./modules/nacl"
+  vpc_name = var.vpc_name
+  admin_cidr = var.admin_cidr
+}

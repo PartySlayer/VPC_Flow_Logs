@@ -23,3 +23,7 @@ variable "public_subnet_cidr_block" {
 variable "private_subnet_cidr_block" {
   description = "CIDR subnet privata"
 }
+
+variable "admin_cidr" {
+    description = "CIDR admin"
+}
