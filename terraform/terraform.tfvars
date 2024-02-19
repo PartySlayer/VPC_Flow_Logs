@@ -1,7 +1,10 @@
 region = "eu-west-1"
-project_name = "highTraffic_monitoring"
+project_name = "traffic_monitoring"
 vpc_cidr_block = "10.0.0.0/16"
 vpc_name = "logs"
 public_subnet_cidr_block = "10.0.0.0/24"
 private_subnet_cidr_block = "10.0.0.1/24"
 admin_cidr = "10.0.0.2/24"
+log_destination = "arn:aws:iam::123456789012:role/flow-logs" # da cambiare
+traffic_type = "REJECT"
+email_sns = ""

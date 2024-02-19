@@ -19,6 +19,7 @@ provider "aws" {
 
 module "vpc" {
   source = "./modules/vpc"
+
   project_name               = var.project_name
   region                     = var.region
   vpc_cidr_block             = var.vpc_cidr_block  
@@ -27,10 +28,36 @@ module "vpc" {
   private_subnet_cidr_block  = var.private_subnet_cidr_block
 }
 
-#NACL
+# NACL
 
 module "nacl" {
   source = "./modules/nacl"
+
   vpc_name = var.vpc_name
   admin_cidr = var.admin_cidr
+}
+
+# VPC Flow Logs
+module "vpc_flow_logs" {
+  source = "./modules/vpc_flow_logs"
+
+  log_destination  = var.log_destination # cloudwatch or s3
+  traffic_type     = var.traffic_type
+}
+
+# sns
+
+module "sns" {
+  source = "./modules/sns"
+
+  email_sns = var.email_sns
+  
+}
+
+# cloudwatch
+
+module "cloudwatch_monitoring" {
+  source = "./modules/cloudwatch_monitoring"
+
+  sns_topic_arn = module.sns.sns_topic_arn # passato tramite output
 }

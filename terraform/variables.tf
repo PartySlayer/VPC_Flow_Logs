@@ -27,3 +27,19 @@ variable "private_subnet_cidr_block" {
 variable "admin_cidr" {
     description = "CIDR admin"
 }
+
+variable "log_destination" {
+  description = "arn IAM role della destinazione log"
+}
+
+variable "traffic_type" {
+  description = "Tipo di traffico: ACCEPT, REJECT, ALL."
+}
+
+variable "sns_topic_arn" {
+  description = "ARN of the SNS topic for CloudWatch alarms"
+}
+
+variable "email_sns" {
+  description = "email dove inviare alert"
+}
