@@ -37,6 +37,19 @@ module "nacl" {
   admin_cidr = var.admin_cidr
 }
 
+# ec2
+
+module "ec2" {
+  source = "./modules/ec2"
+
+  ami_id            = module.ec2.ami_id 
+  instance_type     = module.ec2.instance_type              
+  subnet_id         = module.vpc.public_subnet_id
+  security_group_id = var.security_group_id   # Update with your desired security group ID
+}
+
+# Other configurations for your infrastructure
+
 # VPC Flow Logs
 module "vpc_flow_logs" {
   source = "./modules/vpc_flow_logs"
