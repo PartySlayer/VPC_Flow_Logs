@@ -1,5 +1,5 @@
 resource "aws_cloudwatch_log_group" "vpc_flow_logs_group" {
-  name = "module.vpc.name-log_group"
+  name = module.vpc.name-log_group
 }
 
 resource "aws_cloudwatch_metric_filter" "vpc_flow_logs_non_admin_filter" {

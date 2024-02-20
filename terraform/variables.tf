@@ -43,3 +43,9 @@ variable "sns_topic_arn" {
 variable "email_sns" {
   description = "email dove inviare alert"
 }
+
+variable "ami_id" {}
+
+variable "instance_type" {}
+
+variable "security_group_id" {}
