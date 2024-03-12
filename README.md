@@ -1,3 +1,10 @@
+!!WORK IN PROGRESS!!
+
+*Currently I am paying attention to otherp projects and learning resources.
+I will change the S3/Athena configuration for a smarter choice using Cloudwatch logs insights.
+It will use a query to look up for the ip addresses with most rejected requests.
+The live monitoring module has some variables issues and overall the infrastracture can be improved.
+
 Network monitoring architecture, customizable for live alerts.
 The full infrastructure is provisioned via terraform.
 
